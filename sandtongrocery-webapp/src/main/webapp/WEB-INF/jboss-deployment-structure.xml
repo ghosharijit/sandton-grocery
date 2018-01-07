@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+    <deployment>
+        <dependencies>
+            <module name="com.mysql" />
+        </dependencies>
+        <exclude-subsystems>
+            <subsystem name="jaxrs" />
+        </exclude-subsystems>
+        <exclusions>
+            <module name="org.jboss.logging"/>
+            <module name="org.apache.log4j"/>
+            <module name="org.slf4j"/>
+            <!--<module name="javax.mail"/>-->
+        </exclusions>
+    </deployment>
+</jboss-deployment-structure>

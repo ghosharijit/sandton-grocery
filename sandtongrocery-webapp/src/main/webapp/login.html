@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">   
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+       <script>
+               $(document).ready(function(){
+                $( "#Login" ).click(function() {
+               alert("dfdf");
+                    
+               
+                    $.ajax({
+                    type: "GET",
+                    url: "http://192.168.33.10:8080/helpdeskAPI/v1/loginapi/login/111/222",
+                    data: "firstName=Aidy&lastName=F", // the data in form-encoded format, ie as it would appear on a querystring
+                    //contentType: "application/x-www-form-urlencoded; charset=UTF-8", // if you are using form encoding, this is default so you don't need to supply it
+                    dataType: "text", // the data type we want back, so text.  The data will come wrapped in xml
+                    success: function (data) {
+                        alert(data);
+                    },
+                            error  : function (data) {
+                        alert('Hello');
+                    }
+                });
+                
+
+           });
+           });
+
+        </script>
+      
+  </head>
+
+  <body>
+       <div class="panel panel-default">
+            <div class="panel-heading">SA help desk </div>
+            <div class="panel-body">
+            <div class="container">   
+            <div class="panel panel-primary">
+              <div class="panel-heading">Login </div>
+              <div class="panel-body">
+    <div class="container">
+
+      <form class="form-signin">
+        
+        <div class="form-group">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+          </div>
+          <div class="form-group">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+          </div>
+          
+        </div>
+        <button id="Login" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+  </div>
+</div>
+        </div> <!-- /container -->
+  </div>
+</div>  
+
+    
+      </div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    
+  </body>
+</html>
+
